@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.bet_page, name='bet_page'),
+    path('api/location/', views.test_weather),
 ]
