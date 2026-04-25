@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Casino</title>
+</head>
+<body>
+
+<h1>Сделать ставку</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Город:</label>
+    <input type="text" name="city"><br><br>
+
+    <label>Тип ставки:</label>
+    <select name="bet_type">
+        <option value="temp_gt">Температура больше</option>
+        <option value="rain">Будет дождь</option>
+    </select><br><br>
+
+    <label>Значение (для температуры):</label>
+    <input type="number" name="value"><br><br>
+
+    <label>Сумма:</label>
+    <input type="number" name="amount"><br><br>
+
+    <button type="submit">Поставить</button>
+</form>
+
+</body>
+</html>
